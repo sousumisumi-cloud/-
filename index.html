@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HamTalk</title>
+    <link rel="stylesheet" href="/src/styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <aside class="sidebar" aria-label="チャット一覧">
+        <div class="brand-card">
+          <div class="brand-icon">🐹</div>
+          <div>
+            <p>HamTalk</p>
+            <strong>ハムスターの巣箱チャット</strong>
+          </div>
+        </div>
+        <label class="search-box">
+          <span>⌕</span>
+          <input type="search" placeholder="友だち・種メモを検索" />
+        </label>
+        <section class="seed-bank">
+          <span>今日のひまわり貯金</span>
+          <strong><span id="seedCount">18</span> 粒</strong>
+          <div class="seed-meter"><span id="seedMeter"></span></div>
+        </section>
+        <div id="friendList" class="friend-list"></div>
+      </aside>
+
+      <section class="chat-panel" aria-label="もちたろうとのチャット">
+        <header class="chat-header">
+          <div class="profile-block">
+            <div id="headerAvatar" class="avatar large" aria-label="もちたろうのアバター"></div>
+            <div>
+              <p id="friendRole">ひまわり部長</p>
+              <h1 id="friendName">もちたろう</h1>
+              <span id="friendPresence">オンライン・回し車中</span>
+            </div>
+          </div>
+          <nav class="header-actions" aria-label="チャット操作">
+            <button aria-label="通話">☎</button>
+            <button aria-label="カメラ">📷</button>
+            <button aria-label="その他">⋯</button>
+          </nav>
+        </header>
+
+        <div class="hamster-banner">
+          <div>
+            <span>本日の巣材ニュース</span>
+            <strong>ふわふわティッシュ入荷。みんなで分け合おう！</strong>
+          </div>
+          <div class="banner-hamster">🐹💬</div>
+        </div>
+
+        <div id="messages" class="messages"><time>今日</time></div>
+
+        <form id="composer" class="composer">
+          <button type="button" aria-label="メニュー">☰</button>
+          <button type="button" aria-label="スタンプ">😊</button>
+          <input id="messageInput" placeholder="ハム語でメッセージを入力…" />
+          <button type="button" aria-label="音声">🎙</button>
+          <button class="send-button" type="submit" aria-label="送信">➤</button>
+        </form>
+      </section>
+    </main>
+    <script src="/src/main.js" defer></script>
+  </body>
+</html>
